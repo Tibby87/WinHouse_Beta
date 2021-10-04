@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* GENERAL STYLING */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* FUNCTIONAL SELECTORS */
+.container {
+  margin: auto;
+}
+/* HEADER */
+.header {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(255, 68, 0, 0.315),
+      rgba(255, 68, 0, 0.11)
+    ),
+    url("img/roof.jfif");
+  background-position: bottom;
+  /* background-size: contain; */
+  /* padding: 2rem; */
+  display: flex;
+  /* gap: 1em; */
+  /* padding-bottom: 1.5em; */
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em 0.3em;
+  border-radius: 0 0 10px 10px;
+}
+
+/* LOGO */
+.logo {
+  height: 6rem;
+}
+
+.header-img {
+  width: 70%;
+  border-radius: 8px;
+  z-index: 888;
+  opacity: 1;
+}
+
+/* NAVIGATION */
+.nav-list {
+  display: flex;
+  flex-direction: column;
+
+  list-style: none;
+  gap: 1em;
+  z-index: 999;
+  opacity: 1;
+}
+.nav-link {
+  font-size: 1.3rem;
+}
+.nav-link:link,
+.nav-link:visited {
+  text-decoration: none;
+  color: aliceblue;
+  z-index: 999;
+}
+
+/* MAIN + IMGAE + MAP*/
+main {
+  margin-bottom: 5rem;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 97%;
+}
+.main-img {
+  border-radius: 8px;
+  opacity: 0.8;
+}
+.hero {
+  position: relative;
+  margin: auto;
+}
+.caption {
+  font-size: 0.6rem;
+  background-color: rgba(135, 206, 250, 0.63);
+  border-radius: 5px;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+  color: aliceblue;
+  width: 100%;
+  max-width: 800px;
+  padding: 0.4em 0;
+  z-index: 999;
+}
+
+.call-btn {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+
+  display: inline-block;
+}
+.call-btn:link,
+.call-btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: aliceblue;
+  background-color: rgba(255, 166, 0, 0.767);
+  padding: 0.6em 1.2em;
+  border-radius: 100px;
+}
+.message-form {
+  background-color: rgba(255, 235, 205, 0.445);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  gap: 1em;
+  border-radius: 8px;
+  padding: 1.5em 0;
+}
+.message-form__input {
+  border-radius: 8px;
+  margin: auto;
+  font-size: 1rem;
+  /* font-family: cursive; */
+}
+
+.input-data {
+  width: 50%;
+  height: 2.5em;
+}
+
+.input-message {
+  width: 70%;
+  padding: 0.5em;
+}
+
+.message-btn {
+  cursor: pointer;
+  border-radius: 100px;
+  display: inline-block;
+  margin: auto;
+  padding: 0.5em 1em;
+  background-color: rgba(255, 166, 0, 0.767);
+  font-size: 1.9rem;
+  font-family: inherit;
+  font-weight: bold;
+  color: aliceblue;
+  border-style: none;
+  text-transform: capitalize;
+  box-shadow: 0px 8px 15px rgba(255, 166, 0, 0.151);
+  transition: all 0.3s ease 0s;
+}
+
+.message-btn:hover {
+  opacity: 0.8;
+  box-shadow: 0px 15px 20px rgba(255, 166, 0, 0.253);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* FOOTER */
+.footer {
+  padding: 4rem 0;
+  background-color: blanchedalmond;
+  margin-top: auto;
+  border-radius: 10px 10px 0 0;
+}
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.imp {
+  font-size: 1.2rem;
+  line-height: 2;
+  background-color: blanchedalmond;
+  border-radius: 8px;
+  padding: 2em;
+}
+
+@media screen and (min-width: 800px) {
+  .header {
+    flex-direction: column;
+    gap: 1.6rem;
+    padding: 2rem 0;
+  }
+
+  .header-img {
+    width: 65%;
+    margin: auto;
+  }
+  .nav-list {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 4rem;
+    margin-right: 30px;
+  }
+  .nav-link:link,
+  .nav-link:visited {
+    color: aliceblue;
+    background-color: unset;
+    font-size: 1.5rem;
+    padding: 0.5em;
+    border-radius: 8px;
+  }
+  .nav-link:hover {
+    background-color: rgba(135, 206, 250, 0.918);
+    color: aliceblue;
+    /* padding: 0.5em; */
+  }
+  .nav-link:active {
+    color: orange;
+  }
+
+  .main-container {
+    width: 90%;
+  }
+  .main-img {
+    border-radius: 8px;
+  }
+
+  .caption {
+    font-size: large;
+  }
+
+  .call-btn:link,
+  .call-btn:visited {
+    font-size: 2rem;
+  }
+
+  .input-data {
+    width: 30%;
+  }
+
+  .input-message {
+    max-width: 50%;
+  }
+
+  .message-btn {
+    font-size: 2.4rem;
+  }
+
+  .map {
+    height: 450px;
+  }
+  .footer-list {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0;
+  }
+}
